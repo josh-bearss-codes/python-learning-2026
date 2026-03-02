@@ -30,3 +30,5 @@ while True:
     again = input("Do you want to perform another calculation? (y/n): ")
     if again.lower() == "n":
         break
+    
+#calculator.py
