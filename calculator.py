@@ -20,7 +20,7 @@ while True:
             print("Invalid operation")
                 
     except ZeroDivisionError:
-        print("You can't divide by zeron!")
+        print("You can't divide by zero!")
     except ValueError:
         print("Invalid input. Please enter a valid number.")
     else:
