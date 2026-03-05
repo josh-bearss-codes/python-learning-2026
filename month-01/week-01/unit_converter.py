@@ -1,28 +1,30 @@
 def temp(x, y):
     # If the user input is in Fahrenheit, convert it to Celsius
     if y.lower() == 'f':
-        return (x - 32) * 5/9 + " C"
+        return str((x - 32) * 5/9) + " C"
     # If the user input is in Celsius, convert it to Fahrenheit
     if y.lower() == 'c':
-        return (x * 9/5) + 32 + " F"
-    else: return None
+        return str((x * 9/5) + 32) + " F"
+    else: 
+        return None
 
 def distance(x, y):
     # If the user input is in miles, convert it to kilometers
-    if y.lower() == 'm' or y.lower == 'miles':
-        return x * 1.60934 + " kilometers"
+    if y.lower() == 'm' or y.lower() == 'miles':
+        return str(x * 1.60934) + " kilometers"
     # If the user input is in kilometers, convert it to miles
-    if y.lower() == 'k' or y.lower == 'kilometers':
-        return x / 1.60934 + " miles"
-    else: return None
+    if y.lower() == 'k' or y.lower() == 'kilometers':
+        return str(x / 1.60934) + " miles"
+    else: 
+        return None
 
 def weight(x, y):
     # If the user input is in pounds, convert it to kilograms
     if y.lower() == 'lb':
-        return x * 0.452592 + " kgs"
+        return str(x * 0.452592) + " kgs"
     # If the user input is in kilograms, convert it to pounds
     if y.lower() == 'kg':
-        return x / 0.452592 + " lbs"
+        return str(x / 0.452592) + " lbs"
     
 function_map = {
     'temp': temp,
@@ -31,13 +33,19 @@ function_map = {
 }
 
 while True:
-    user_choice = input("Enter the type of conversion you would like (temp, distance, weight)?")
-    function = function_map[user_choice]
+    user_choice = input("Enter the type of conversion you would like (temp, distance, weight)? ")
+    function = function_map.get(user_choice)
+    if function is None:
+        print("Invalid conversion type")
+        continue
+        
     try:
-        x = int(input("Enter the value to convert"))
+        x = float(input("Enter the value to convert: "))
     except ValueError:
         print("Value entered is not a number")
-    y = input("Enter the type of the value (F, C, Miles(M), Kilometers(K), Lbs (lb), Kgs(kg)")
+        continue
+        
+    y = input("Enter the type of the value (F, C, Miles(M), Kilometers(K), Lbs(lb), Kgs(kg)): ")
 
     result = function(x, y)
     if result is not None:
@@ -45,5 +53,5 @@ while True:
     else:
         print("Unable to convert due to Error")
     
-    if input("Would you like to do another conversion (q to quit)").lower() == 'q':
+    if input("Would you like to do another conversion (q to quit): ").lower() == 'q':
         break
