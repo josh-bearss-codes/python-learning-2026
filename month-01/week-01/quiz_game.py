@@ -30,7 +30,6 @@ class Quiz:
             with open(filepath, 'r') as file:
                 data = json.load(file)
                 questions = []
-                print(data)
                 for item in data['questions']:
                     questions.append(Question(item['question'], item['options'], item['answer']))
                 return questions
