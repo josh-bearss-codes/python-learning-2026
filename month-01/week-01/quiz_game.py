@@ -30,9 +30,10 @@ class Quiz:
             with open(filepath, 'r') as file:
                 data = json.load(file)
                 questions = []
-                for item in data:
+                print(data)
+                for item in data['questions']:
                     questions.append(Question(item['question'], item['options'], item['answer']))
-                    return questions
+                return questions
         except FileNotFoundError:
             print("Error: File not found.")
             return []
@@ -45,11 +46,12 @@ class Quiz:
 
     def run(self):
         # shuffle questions (optional)
+        random.shuffle(self.questions)
         # loop through questions with enumerate
         # display each, get user answer, check, update score
         for i, question in enumerate(self.questions, 1):
             print(f"Question {i}:")
-            question.display() # Call display method
+            question.display(i) # Call display method
             user_answer = input("Your answer (1-4): ")
             if question.check_answer(int(user_answer)):
                 print("Correct!")
