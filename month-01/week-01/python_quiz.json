@@ -1,0 +1,30 @@
+{
+    "title": "Python Basics Quiz",
+    "questions": [
+        {
+            "question": "What keyword defines a function in Python?",
+            "options": ["func", "def", "function", "define"],
+            "answer": "def"
+        },
+        {
+            "question": "Which method adds an item to the end of a list?",
+            "options": ["add()", "insert()", "append()", "push()"],
+            "answer": "append()"
+        },
+        {
+            "question": "What does 'self' refer to in a class method?",
+            "options": ["The class itself", "The current instance", "The parent class", "Nothing"],
+            "answer": "The current instance"
+        },
+        {
+            "question": "How do you open a file for reading in Python?",
+            "options": ["open('file', 'w')", "open('file', 'r')", "read('file')", "file.open()"],
+            "answer": "open('file', 'r')"
+        },
+        {
+            "question": "What module is used for working with JSON in Python?",
+            "options": ["data", "json", "serialize", "parse"],
+            "answer": "json"
+        }
+    ]
+}
