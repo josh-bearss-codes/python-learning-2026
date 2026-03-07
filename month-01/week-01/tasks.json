@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Shopping",
+        "priority": "Low",
+        "due_date": "2026-03-06",
+        "completed": false
+    },
+    {
+        "title": "Groceries",
+        "priority": "Medium",
+        "due_date": "2026-03-06",
+        "completed": false
+    }
+]
