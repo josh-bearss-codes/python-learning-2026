@@ -1,0 +1,8 @@
+Date,Description,Amount,Category,Type
+2026-03-01,Paycheck,3200.00,Income,income
+2026-03-02,Rent,-1200.00,Housing,expense
+2026-03-03,Groceries Costco,-185.50,Food,expense
+2026-03-04,Gas,-45.00,Transport,expense
+2026-03-05,Netflix,-15.99,Entertainment,expense
+2026-03-06,Side project payment,500.00,Income,income
+2026-03-07,Protein powder,-42.00,Food,expense
