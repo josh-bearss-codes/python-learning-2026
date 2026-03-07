@@ -11,6 +11,7 @@ DATA_FILE = "finance_data.json"
 # ──────────────────────────────────────
 class Transaction:
     def __init__(self, amount, category, description, date=None, trans_type="expense"):
+        # Store amount as positive for all transactions, but use trans_type to determine sign for calculations
         self.amount = amount
         self.category = category
         self.description = description
@@ -42,7 +43,17 @@ class Account:
         # sum(t.amount for t in self.transactions)
         # This is a property because balance is derived from data,
         # not stored independently. It's always calculated fresh.
-        balance = sum(t.amount for t in self.transactions)
+        balance = 0
+        for t in self.transactions:
+            if t.trans_type == "income":
+                balance += t.amount
+            elif t.trans_type == "expense":
+                balance -= t.amount
+            elif t.trans_type == "transfer":
+                # For transfers, we need to handle this carefully - 
+                # transfer transactions should be treated as both income and expense
+                # but for account balance, they cancel out
+                pass # Transfer amount is already accounted for in the transfer transaction
         return balance
 
     def add_transaction(self, transaction):
@@ -229,6 +240,7 @@ class FinanceManager:
         if account_name:
             # Summarize single account
             for transaction in self.data.accounts[account_name].transactions:
+                # Only include expenses in spending summary
                 if transaction.trans_type == "expense":
                     summary[transaction.category] += transaction.amount
         else:
@@ -249,10 +261,10 @@ class FinanceManager:
         summary = defaultdict(lambda: {"income": 0, "expenses": 0, "net": 0})
         for transaction in self.data.accounts[account_name].transactions:
             month = transaction.date[:7]  # YYYY-MM format
-            if transaction.amount > 0:
+            if transaction.trans_type == "income":
                 summary[month]["income"] += transaction.amount
-            else:
-                summary[month]["expenses"] += abs(transaction.amount)
+            elif transaction.trans_type == "expense":
+                summary[month]["expenses"] += transaction.amount
                 
         # Calculate net for each month
         for month in summary:
@@ -302,17 +314,23 @@ class FinanceApp:
             print("7. Exit")
             choice = input("Enter your choice: ")
             if choice == "1":
-                self.show_accounts_overview()
+                prompt = self.show_accounts_overview()
+                print(prompt)
             elif choice == "2":
-                self.show_category_breakdown()
+                prompt = self.show_category_breakdown()
+                print(prompt)
             elif choice == "3":    
-                self.add_transaction_prompt()
+                prompt = self.add_transaction_prompt()
+                print(prompt)
             elif choice == "4":
-                self.import_csv_prompt()
+                prompt = self.import_csv_prompt()
+                print(prompt)
             elif choice == "5":
-                self.export_csv_prompt()
+                prompt = self.export_csv_prompt()
+                print(prompt)
             elif choice == "6":
-                self.transfer_prompt()
+                prompt = self.transfer_prompt()
+                print(prompt)
             elif choice == "7":
                 break
             else:
