@@ -10,28 +10,28 @@
         "trans_type": "income"
       },
       {
-        "amount": -1200.0,
+        "amount": 1200.0,
         "category": "Housing",
         "description": "Rent",
         "date": "2026-03-02",
         "trans_type": "expense"
       },
       {
-        "amount": -185.5,
+        "amount": 185.5,
         "category": "Food",
         "description": "Groceries Costco",
         "date": "2026-03-03",
         "trans_type": "expense"
       },
       {
-        "amount": -45.0,
+        "amount": 45.0,
         "category": "Transport",
         "description": "Gas",
         "date": "2026-03-04",
         "trans_type": "expense"
       },
       {
-        "amount": -15.99,
+        "amount": 15.99,
         "category": "Entertainment",
         "description": "Netflix",
         "date": "2026-03-05",
@@ -45,23 +45,30 @@
         "trans_type": "income"
       },
       {
-        "amount": -42.0,
+        "amount": 42.0,
         "category": "Food",
         "description": "Protein powder",
         "date": "2026-03-07",
         "trans_type": "expense"
       },
       {
-        "amount": -100.0,
+        "amount": 100.0,
         "category": "Food",
         "description": "Red Robin - Birthday",
         "date": "2026-03-07",
         "trans_type": "expense"
       },
       {
-        "amount": -100.0,
+        "amount": 100.0,
         "category": "Food",
         "description": "Food again",
+        "date": "2026-03-07",
+        "trans_type": "expense"
+      },
+      {
+        "amount": 100.0,
+        "category": "Transport",
+        "description": "To Denver",
         "date": "2026-03-07",
         "trans_type": "expense"
       }

@@ -347,7 +347,7 @@ class FinanceApp:
         for account in self.manager.accounts.values():
             print(f"{account.name:<15} ${account.balance:,.2f}")
         # Footer
-        print(f"{'Net Worth':<15} {'':>10} ${self.manager.net_worth:,.2f}")
+        return f"{'Net Worth':<15} {'':>10} ${self.manager.net_worth:,.2f}"
 
     def show_category_breakdown(self):
         # Get spending by category from manager
@@ -361,7 +361,7 @@ class FinanceApp:
             print(f"{category:<15} ${amount:<10,.2f}")
         # Footer
         total = sum(spending.values())
-        print(f"{'Total Spending':<15} {'':>10} ${total:,.2f}")
+        return f"{'Total Spending':<15} {'':>10} ${total:,.2f}"
 
     def add_transaction_prompt(self):
         # Get account, amount, category, description from user
