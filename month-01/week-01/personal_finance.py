@@ -375,7 +375,7 @@ class FinanceApp:
         try:
             file_path = input("Enter file path: ")
             account_name = input("Enter account name: ")
-            self.manager.import_csv(file_path, account_name)
+            self.data.import_csv(file_path, account_name)
             return "CSV imported successfully!"
         except Exception as e:
             return f"An error occurred: {str(e)}"
@@ -395,7 +395,7 @@ class FinanceApp:
             if not end_date:
                 end_date = None
                 
-            self.manager.export_csv(file_path, account_name, start_date, end_date)
+            self.data.export_csv(file_path, account_name, start_date, end_date)
             return "CSV exported successfully!"
         except Exception as e:
             return f"An error occurred: {str(e)}"
