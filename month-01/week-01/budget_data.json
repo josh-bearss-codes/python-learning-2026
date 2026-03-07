@@ -1,0 +1,13 @@
+{
+    "budgets": {
+        "Food": 600.0
+    },
+    "expenses": [
+        {
+            "date": "2026-03-07",
+            "amount": 200.0,
+            "description": "Purchased Food",
+            "category": "Food"
+        }
+    ]
+}
