@@ -1,0 +1,13 @@
+date,product,quantity,unit_price,region
+2026-03-01,Widget A,10,29.99,North
+2026-03-01,widget b,5,49.99,South
+03/02/2026,Widget A,3,29.99,north
+2026-03-02,Widget C,-2,19.99,East
+2026-03-03,Widget B,,49.99,West
+2026-03-03,WIDGET A,7,29.99,North
+2026-03-04,Widget D,12,0,South
+2026-03-04,Widget A,8,29.99,
+2026-03-05,Widget B,4,49.99,East
+2026-03-05,,6,15.99,West
+2026-03-06,Widget A,twenty,29.99,North
+2026-03-06,Widget C,3,19.99,South

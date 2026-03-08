@@ -1,0 +1,62 @@
+[
+  {
+    "date": "2026-03-01",
+    "product": "Widget A",
+    "quantity": 10,
+    "unit_price": 29.99,
+    "region": "North",
+    "total": 299.9,
+    "row_number": 1,
+    "errors": []
+  },
+  {
+    "date": "2026-03-01",
+    "product": "Widget B",
+    "quantity": 5,
+    "unit_price": 49.99,
+    "region": "South",
+    "total": 249.95000000000002,
+    "row_number": 2,
+    "errors": []
+  },
+  {
+    "date": "2026-03-02",
+    "product": "Widget A",
+    "quantity": 3,
+    "unit_price": 29.99,
+    "region": "North",
+    "total": 89.97,
+    "row_number": 3,
+    "errors": []
+  },
+  {
+    "date": "2026-03-03",
+    "product": "Widget A",
+    "quantity": 7,
+    "unit_price": 29.99,
+    "region": "North",
+    "total": 209.92999999999998,
+    "row_number": 6,
+    "errors": []
+  },
+  {
+    "date": "2026-03-05",
+    "product": "Widget B",
+    "quantity": 4,
+    "unit_price": 49.99,
+    "region": "East",
+    "total": 199.96,
+    "row_number": 9,
+    "errors": []
+  },
+  {
+    "date": "2026-03-06",
+    "product": "Widget C",
+    "quantity": 3,
+    "unit_price": 19.99,
+    "region": "South",
+    "total": 59.97,
+    "row_number": 12,
+    "errors": []
+  }
+]

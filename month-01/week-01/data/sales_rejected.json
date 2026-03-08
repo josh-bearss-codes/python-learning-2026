@@ -1,0 +1,115 @@
+[
+  {
+    "raw_data": {
+      "date": "2026-03-02",
+      "product": "Widget C",
+      "quantity": -2,
+      "unit_price": 19.99,
+      "region": "East",
+      "total": -39.98,
+      "row_number": 4,
+      "errors": []
+    },
+    "reasons": [
+      "Quantity must be positive"
+    ],
+    "row_number": 4
+  },
+  {
+    "raw_data": {
+      "date": "2026-03-03",
+      "product": "Widget B",
+      "quantity": 0,
+      "unit_price": 49.99,
+      "region": "West",
+      "total": 0.0,
+      "row_number": 5,
+      "errors": [
+        "Invalid quantity: ",
+        "Quantity is required"
+      ]
+    },
+    "reasons": [
+      "Quantity must be positive",
+      "Transformation errors detected"
+    ],
+    "row_number": 5
+  },
+  {
+    "raw_data": {
+      "date": "2026-03-04",
+      "product": "Widget D",
+      "quantity": 12,
+      "unit_price": 0.0,
+      "region": "South",
+      "total": 0.0,
+      "row_number": 7,
+      "errors": [
+        "Unit price is required"
+      ]
+    },
+    "reasons": [
+      "Unit price must be positive",
+      "Transformation errors detected"
+    ],
+    "row_number": 7
+  },
+  {
+    "raw_data": {
+      "date": "2026-03-04",
+      "product": "Widget A",
+      "quantity": 8,
+      "unit_price": 29.99,
+      "region": "",
+      "total": 239.92,
+      "row_number": 8,
+      "errors": [
+        "Region is required"
+      ]
+    },
+    "reasons": [
+      "Region cannot be empty",
+      "Transformation errors detected"
+    ],
+    "row_number": 8
+  },
+  {
+    "raw_data": {
+      "date": "2026-03-05",
+      "product": "",
+      "quantity": 6,
+      "unit_price": 15.99,
+      "region": "West",
+      "total": 95.94,
+      "row_number": 10,
+      "errors": [
+        "Product is required"
+      ]
+    },
+    "reasons": [
+      "Product cannot be empty",
+      "Transformation errors detected"
+    ],
+    "row_number": 10
+  },
+  {
+    "raw_data": {
+      "date": "2026-03-06",
+      "product": "Widget A",
+      "quantity": 0,
+      "unit_price": 29.99,
+      "region": "North",
+      "total": 0.0,
+      "row_number": 11,
+      "errors": [
+        "Invalid quantity: twenty",
+        "Quantity is required"
+      ]
+    },
+    "reasons": [
+      "Quantity must be positive",
+      "Transformation errors detected"
+    ],
+    "row_number": 11
+  }
+]
