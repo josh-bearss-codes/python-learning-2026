@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Spaghetti Carbonara",
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "spaghetti",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "name": "guanciale",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "eggs",
+        "amount": 4,
+        "unit": ""
+      },
+      {
+        "name": "parmesan",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "black pepper",
+        "amount": 2,
+        "unit": "pinch"
+      }
+    ],
+    "steps": [
+      {
+        "number": 1,
+        "instruction": "Boil pasta in salted water",
+        "duration_minutes": 10
+      },
+      {
+        "number": 2,
+        "instruction": "Cook guanciale until crispy",
+        "duration_minutes": 8
+      },
+      {
+        "number": 3,
+        "instruction": "Mix eggs and parmesan in a bowl",
+        "duration_minutes": ""
+      },
+      {
+        "number": 4,
+        "instruction": "Drain pasta, combine with guanciale off heat",
+        "duration_minutes": ""
+      },
+      {
+        "number": 5,
+        "instruction": "Add egg mixture and toss quickly",
+        "duration_minutes": ""
+      }
+    ],
+    "description": "Classic Roman pasta dish",
+    "prep_time": "10",
+    "cook_time": "20",
+    "tags": [
+      "Italian",
+      " pasta",
+      " quick"
+    ]
+  }
+]
