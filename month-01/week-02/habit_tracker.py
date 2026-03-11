@@ -106,12 +106,18 @@ class Habit:
         current_streak = 1
         maximum_streak = 1
 
+        # Walk through sorted dates to find the longest streak
         for i in range(1, len(sorted_dates)):
-            if (sorted_dates[i] - sorted_dates[i-1]).days == 1:
+            # Check if the current date is exactly one day after
+            if sorted_dates[i] == sorted_dates[i-1] + timedelta(days=1) :
                 current_streak += 1
-                maximum_streak = max(maximum_streak, current_streak)
             else:
+                # Reset streak if gap is more than one day
+                maximum_streak = max(maximum_streak, current_streak)
                 current_streak = 1
+
+        # Final check for the last streak
+        maximum_streak = max(maximum_streak,current_streak)
 
         return maximum_streak
     
@@ -395,7 +401,7 @@ class HabitApp:
         # Show pending habits
         # User picks one
         # Mark complete, show updated streak
-        pending = [h for h in self.manager.get_pending_habits()]
+        pending = [h for h in self.manager.get_all_sorted()]
         if not pending:
             print("No pending habits to complete today.")
             return
@@ -410,7 +416,7 @@ class HabitApp:
                 habit = pending[choice]
                 self.manager.complete_habit(habit.name)
                 print(f"✅ {habit.name} marked as complete!")
-                print(f"🔥 Streak: {self.manager.get_habit(habit.name).streak}")
+                print(f"🔥 Streak: {self.manager.get_habit(habit.name).current_streak}")
             else:
                 print("Invalid choice try again.")
         except ValueError:
