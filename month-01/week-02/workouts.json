@@ -1,0 +1,162 @@
+[
+    {
+        "exercise": "Bench Press",
+        "date_performed": "2026-02-17",
+        "sets": 3,
+        "reps": 10,
+        "weight": 135,
+        "volume": 4050
+    },
+    {
+        "exercise": "Bench Press",
+        "date_performed": "2026-02-20",
+        "sets": 3,
+        "reps": 10,
+        "weight": 140,
+        "volume": 4200
+    },
+    {
+        "exercise": "Bench Press",
+        "date_performed": "2026-02-24",
+        "sets": 4,
+        "reps": 8,
+        "weight": 145,
+        "volume": 4640
+    },
+    {
+        "exercise": "Bench Press",
+        "date_performed": "2026-02-27",
+        "sets": 4,
+        "reps": 8,
+        "weight": 145,
+        "volume": 4640
+    },
+    {
+        "exercise": "Bench Press",
+        "date_performed": "2026-03-03",
+        "sets": 4,
+        "reps": 8,
+        "weight": 150,
+        "volume": 4800
+    },
+    {
+        "exercise": "Bench Press",
+        "date_performed": "2026-03-06",
+        "sets": 3,
+        "reps": 10,
+        "weight": 155,
+        "volume": 4650
+    },
+    {
+        "exercise": "Bench Press",
+        "date_performed": "2026-03-10",
+        "sets": 4,
+        "reps": 8,
+        "weight": 155,
+        "volume": 4960
+    },
+    {
+        "exercise": "Bench Press",
+        "date_performed": "2026-03-13",
+        "sets": 4,
+        "reps": 6,
+        "weight": 160,
+        "volume": 3840
+    },
+    {
+        "exercise": "Squat",
+        "date_performed": "2026-02-18",
+        "sets": 3,
+        "reps": 8,
+        "weight": 185,
+        "volume": 4440
+    },
+    {
+        "exercise": "Squat",
+        "date_performed": "2026-02-21",
+        "sets": 4,
+        "reps": 8,
+        "weight": 185,
+        "volume": 5920
+    },
+    {
+        "exercise": "Squat",
+        "date_performed": "2026-02-25",
+        "sets": 4,
+        "reps": 6,
+        "weight": 195,
+        "volume": 4680
+    },
+    {
+        "exercise": "Squat",
+        "date_performed": "2026-03-01",
+        "sets": 4,
+        "reps": 8,
+        "weight": 195,
+        "volume": 6240
+    },
+    {
+        "exercise": "Squat",
+        "date_performed": "2026-03-04",
+        "sets": 4,
+        "reps": 6,
+        "weight": 205,
+        "volume": 4920
+    },
+    {
+        "exercise": "Squat",
+        "date_performed": "2026-03-08",
+        "sets": 3,
+        "reps": 8,
+        "weight": 205,
+        "volume": 4920
+    },
+    {
+        "exercise": "Squat",
+        "date_performed": "2026-03-11",
+        "sets": 4,
+        "reps": 6,
+        "weight": 210,
+        "volume": 5040
+    },
+    {
+        "exercise": "Deadlift",
+        "date_performed": "2026-02-19",
+        "sets": 3,
+        "reps": 5,
+        "weight": 225,
+        "volume": 3375
+    },
+    {
+        "exercise": "Deadlift",
+        "date_performed": "2026-02-26",
+        "sets": 3,
+        "reps": 5,
+        "weight": 235,
+        "volume": 3525
+    },
+    {
+        "exercise": "Deadlift",
+        "date_performed": "2026-03-05",
+        "sets": 3,
+        "reps": 5,
+        "weight": 245,
+        "volume": 3675
+    },
+    {
+        "exercise": "Deadlift",
+        "date_performed": "2026-03-12",
+        "sets": 3,
+        "reps": 3,
+        "weight": 255,
+        "volume": 2295
+    },
+    {
+        "exercise": "Deadlift",
+        "date_performed": "2026-03-02",
+        "sets": 3,
+        "reps": 5,
+        "weight": 265,
+        "volume": 3975
+    }
+]
