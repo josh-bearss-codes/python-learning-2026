@@ -1,0 +1,65 @@
+## Weather Dashboard — Technical Specification
+
+### Overview
+A weather dashboard that fetches current conditions and a 5-day forecast
+from the OpenWeatherMap API for any city, displays results in a formatted
+terminal UI, and caches responses to avoid redundant API calls.
+
+### Architecture
+Three-layer design:
+- Data Layer: API client + JSON cache
+- Business Logic: Weather data processing and analysis  
+- Presentation: Formatted terminal display
+
+### Classes
+
+**WeatherAPIClient**
+- __init__(api_key: str, cache_dir: Path)
+- get_current(city: str) -> dict — fetch current weather, check cache first
+- get_forecast(city: str) -> dict — fetch 5-day forecast, check cache first
+- _make_request(endpoint: str, params: dict) -> dict — actual HTTP call with error handling
+- _get_cache(cache_key: str) -> dict or None — return cached data if fresh (< 30 min)
+- _set_cache(cache_key: str, data: dict) -> None — save response to cache file
+
+Cache: Store responses as JSON files in cache_dir. Cache key = city_endpoint_hash.
+Cache expiry: 30 minutes. Use file modification time to check freshness.
+
+**WeatherData**
+Dataclass holding parsed weather information:
+- city, country, temperature (°F), feels_like, humidity, pressure, visibility, dew_point, cloudiness,
+  wind_speed, conditions (str), icon_code, timestamp
+- @property temperature_c -> Celsius conversion
+- @property wind_description -> "Light breeze" / "Moderate" / "Strong" etc.
+
+**ForecastDay**
+Dataclass for one day in the forecast:
+- date, high_temp, low_temp, conditions, precipitation_chance, pressure, visibility, dew_point, cloudiness
+
+**WeatherAnalyzer**  
+- summarize_forecast(forecast_days: list) -> dict — weekly summary
+- get_trend(forecast_days: list) -> str — "warming", "cooling", "stable"
+- get_best_day(forecast_days: list) -> ForecastDay — best weather day
+- get_worst_day(forecast_day: list) -> ForecastDay - worst weather day
+
+**WeatherDisplay**
+- show_current(weather: WeatherData) -> None — formatted current conditions
+- show_forecast(days: list[ForecastDay]) -> None — formatted 5-day table
+- show_summary(summary: dict) -> None — weekly analysis
+
+### Error Handling
+- Invalid city: catch 404 from API, display "City not found"
+- API key missing: raise clear error with instructions
+- Network failure: catch ConnectionError, show cached data if available
+- Rate limit exceeded: catch 429, show wait message with retry time
+
+### Dependencies
+- requests (HTTP library — needs pip install)
+- dataclasses (standard library)
+- pathlib (standard library)
+- json (standard library)
+
+### API Details
+- Base URL: https://api.openweathermap.org/data/2.5
+- Current: /weather?q={city}&appid={key}&units=imperial
+- Forecast: /forecast?q={city}&appid={key}&units=imperial
+- Free tier: 1000 calls/day, 60 calls/minute
