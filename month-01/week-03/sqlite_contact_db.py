@@ -593,7 +593,7 @@ class ContactApp:
             for phone in contact.phones:
                 print(f"  {phone.type}: {phone.number}")
         else:
-            contact = self.db.get_contact_by_name(contact_id)
+            contact = self.db.search_contacts(contact_id)
             if contact:
                 print(contact)
                 print("Phones:")
